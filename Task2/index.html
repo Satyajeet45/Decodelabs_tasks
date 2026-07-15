@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DevStudio - Frontend Development</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER with hamburger menu (no JS) -->
+  <header>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+
+    <div class="header-inner">
+      <a href="#" class="logo">Dev<span>Studio</span></a>
+      <label for="menu-toggle" class="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>We Design &amp; <span>Build</span> the Web.</h1>
+        <p>A frontend development studio focused on clean structure, readable code, and layouts that work on every device.</p>
+        <div class="hero-btns">
+          <a href="#portfolio" class="btn btn-primary">See Our Work</a>
+          <a href="#contact" class="btn btn-outline">Contact Us</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=900&q=80"
+          alt="Code editor showing a frontend project in development"
+          width="900"
+          height="380"
+        />
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <div class="stats">
+      <div class="stat-item">
+        <h3>48+</h3>
+        <p>Projects Done</p>
+      </div>
+      <div class="stat-item">
+        <h3>32+</h3>
+        <p>Happy Clients</p>
+      </div>
+      <div class="stat-item">
+        <h3>3 Yrs</h3>
+        <p>Experience</p>
+      </div>
+      <div class="stat-item">
+        <h3>100%</h3>
+        <p>Satisfaction</p>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <img
+        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80"
+        alt="Developer working on a MacBook at a clean desk"
+        width="800"
+        height="340"
+      />
+      <div class="about-text">
+        <h2>Building the web, <span>the right way.</span></h2>
+        <p>We started DevStudio because we were tired of seeing websites with broken structure and styles copied from Stack Overflow. We do things properly.</p>
+        <p>Every project starts with information architecture — we plan before we code. The result is websites that are fast, readable, and easy to maintain.</p>
+        <ul class="about-list">
+          <li>Semantic HTML on every project</li>
+          <li>Separate CSS files — no inline styles</li>
+          <li>Mobile-first responsive design</li>
+          <li>Accessible to all users</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+      <div class="section-heading">
+        <h2>What We Do</h2>
+        <p>Services we offer to our clients</p>
+      </div>
+      <div class="cards-grid">
+        <article class="card">
+          <div class="card-icon">🖥️</div>
+          <h3>Static Websites</h3>
+          <p>Fast, clean websites built with pure HTML and CSS. Great for portfolios, landing pages, and business sites.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">📱</div>
+          <h3>Responsive Design</h3>
+          <p>Every layout we build works on mobile, tablet, and desktop using CSS Grid and Flexbox properly.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">♿</div>
+          <h3>Accessibility</h3>
+          <p>We follow A11Y standards — proper alt text, semantic tags, heading hierarchy, and contrast ratios.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">⚡</div>
+          <h3>Performance</h3>
+          <p>Clean minimal code means faster load times. We optimize images and avoid unnecessary libraries.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🎨</div>
+          <h3>UI Design</h3>
+          <p>Simple, modern interface design with good typography, spacing, and visual hierarchy.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🔍</div>
+          <h3>Code Audit</h3>
+          <p>We review existing codebases for semantic issues, CSS problems, and layout errors.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="portfolio" id="portfolio">
+      <div class="section-heading">
+        <h2>Our Work</h2>
+        <p>A few projects we have built recently</p>
+      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&q=80" alt="Business landing page on a monitor" width="600" height="180"/>
+          <div class="caption">
+            <h3>Business Landing Page</h3>
+            <p>HTML · CSS · Grid Layout</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80" alt="Code editor screen showing CSS and HTML" width="600" height="180"/>
+          <div class="caption">
+            <h3>Developer Portfolio</h3>
+            <p>HTML · CSS · Flexbox</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&q=80" alt="Analytics dashboard on a laptop screen" width="600" height="180"/>
+          <div class="caption">
+            <h3>Analytics Dashboard</h3>
+            <p>HTML · CSS · Responsive</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=600&q=80" alt="Mobile app UI wireframe on screen" width="600" height="180"/>
+          <div class="caption">
+            <h3>Mobile App UI</h3>
+            <p>HTML · CSS · Mobile First</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=600&q=80" alt="Blog website with clean typography" width="600" height="180"/>
+          <div class="caption">
+            <h3>Blog Website</h3>
+            <p>HTML · CSS · Semantic Tags</p>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=600&q=80" alt="E-commerce product grid layout" width="600" height="180"/>
+          <div class="caption">
+            <h3>E-Commerce Frontend</h3>
+            <p>HTML · CSS · Grid</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="team" id="team">
+      <div class="section-heading">
+        <h2>The Team</h2>
+        <p>People who write the code</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&q=80" alt="Arjun Sharma, Lead Developer" width="80" height="80"/>
+          <h3>Arjun Sharma</h3>
+          <div class="role">Lead Developer</div>
+          <p>5 years building semantic, accessible websites. Obsessed with clean code and proper structure.</p>
+        </div>
+        <div class="team-card">
+          <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=200&q=80" alt="Priya Mehta, UI Designer" width="80" height="80"/>
+          <h3>Priya Mehta</h3>
+          <div class="role">UI Designer</div>
+          <p>Designs interfaces that are simple, readable, and actually make sense to the people using them.</p>
+        </div>
+        <div class="team-card">
+          <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?w=200&q=80" alt="Rahul Verma, Frontend Engineer" width="80" height="80"/>
+          <h3>Rahul Verma</h3>
+          <div class="role">Frontend Engineer</div>
+          <p>Turns designs into pixel-perfect HTML and CSS. Specialises in responsive layouts and performance.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="section-heading">
+        <h2>Get In Touch</h2>
+        <p>We are always open to new projects</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Contact Details</h3>
+          <div class="info-item">
+            <strong>Email</strong>
+            <span>hello@devstudio.com</span>
+          </div>
+          <div class="info-item">
+            <strong>Phone</strong>
+            <span>+91 98765 43210</span>
+          </div>
+          <div class="info-item">
+            <strong>Location</strong>
+            <span>Kanpur, Uttar Pradesh, India</span>
+          </div>
+          <div class="info-item">
+            <strong>Hours</strong>
+            <span>Monday – Saturday, 9am to 6pm</span>
+          </div>
+        </div>
+        <div class="contact-form">
+          <input type="text" placeholder="Your Name" />
+          <input type="email" placeholder="Your Email" />
+          <input type="text" placeholder="Subject" />
+          <textarea placeholder="Tell us about your project..."></textarea>
+          <a href="#" class="btn btn-primary">Send Message</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 <span>DevStudio</span>. Built with HTML &amp; CSS.</p>
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </footer>
+
+</body>
+</html>

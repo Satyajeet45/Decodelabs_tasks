@@ -1,0 +1,615 @@
+/* =====================
+   BASE (Mobile First)
+   ===================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #222;
+  background: #fff;
+  font-size: 1rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ── HEADER ── */
+header {
+  background: #fff;
+  border-bottom: 2px solid #f0f0f0;
+  padding: 0 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #111;
+  text-decoration: none;
+}
+
+.logo span { color: #e63946; }
+
+/* ── HAMBURGER (checkbox trick — no JS) ── */
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 8px;
+  min-width: 44px;
+  min-height: 44px;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #111;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Animate hamburger to X when checked */
+.menu-toggle:checked ~ .header-inner .hamburger span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.menu-toggle:checked ~ .header-inner .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle:checked ~ .header-inner .hamburger span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile nav — hidden by default */
+nav {
+  display: none;
+  background: #fff;
+  border-top: 1px solid #eee;
+  padding: 1rem 0;
+}
+
+.menu-toggle:checked ~ nav {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+nav ul li a {
+  display: block;
+  padding: 0.8rem 1.2rem;
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a:hover { color: #e63946; }
+
+/* ── HERO ── */
+.hero {
+  background: #111;
+  color: #fff;
+  padding: 3rem 1.2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(1.8rem, 6vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero h1 span { color: #e63946; }
+
+.hero p {
+  font-size: 1rem;
+  color: #bbb;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  max-width: 55ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-image {
+  display: none;
+}
+
+.hero-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+/* ── BUTTONS ── */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  min-height: 44px;
+  min-width: 44px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary { background: #e63946; color: #fff; }
+.btn-primary:hover { background: #c1121f; }
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #555;
+}
+.btn-outline:hover { border-color: #e63946; color: #e63946; }
+
+/* ── STATS ── */
+.stats {
+  background: #e63946;
+  padding: 1.5rem 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.stat-item p {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.85);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+/* ── SECTION COMMON ── */
+.section-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-heading h2 {
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-weight: 800;
+  color: #111;
+}
+
+.section-heading p {
+  color: #888;
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+
+/* ── ABOUT ── */
+.about {
+  padding: 3rem 1.2rem;
+  background: #fafafa;
+}
+
+.about img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.about-text h2 {
+  font-size: clamp(1.3rem, 4vw, 1.8rem);
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 0.8rem;
+}
+
+.about-text h2 span { color: #e63946; }
+
+.about-text p {
+  color: #555;
+  line-height: 1.8;
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+}
+
+.about-list {
+  list-style: none;
+  margin-top: 0.5rem;
+}
+
+.about-list li {
+  color: #444;
+  font-size: 0.9rem;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.about-list li::before {
+  content: "✓ ";
+  color: #e63946;
+  font-weight: bold;
+}
+
+/* ── SERVICES ── */
+.services {
+  padding: 3rem 1.2rem;
+  background: #fff;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 1.5rem;
+  background: #fff;
+}
+
+.card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.card-icon { font-size: 2rem; margin-bottom: 0.8rem; }
+
+.card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.5rem;
+}
+
+.card p { font-size: 0.88rem; color: #666; line-height: 1.6; }
+
+/* ── PORTFOLIO ── */
+.portfolio {
+  padding: 3rem 1.2rem;
+  background: #fafafa;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.portfolio-item {
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #eee;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.portfolio-item .caption {
+  padding: 0.8rem 1rem;
+}
+
+.portfolio-item .caption h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.portfolio-item .caption p {
+  font-size: 0.78rem;
+  color: #999;
+  margin-top: 3px;
+}
+
+/* ── TEAM ── */
+.team {
+  padding: 3rem 1.2rem;
+  background: #fff;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.team-card {
+  text-align: center;
+  padding: 2rem 1rem;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background: #fafafa;
+}
+
+.team-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 0.8rem;
+  border: 3px solid #e63946;
+}
+
+.team-card h3 { font-size: 1rem; font-weight: 700; color: #111; }
+
+.team-card .role {
+  font-size: 0.78rem;
+  color: #e63946;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 4px 0 8px;
+}
+
+.team-card p { font-size: 0.85rem; color: #777; line-height: 1.6; }
+
+/* ── CONTACT ── */
+.contact {
+  padding: 3rem 1.2rem;
+  background: #111;
+  color: #fff;
+}
+
+.contact .section-heading h2 { color: #fff; }
+.contact .section-heading p  { color: #888; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.contact-info h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.info-item { margin-bottom: 1rem; }
+
+.info-item strong {
+  display: block;
+  font-size: 0.72rem;
+  color: #e63946;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 2px;
+}
+
+.info-item span { font-size: 0.9rem; color: #bbb; }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem 1rem;
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  min-height: 44px;
+  width: 100%;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #e63946;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder { color: #666; }
+
+.contact-form textarea {
+  height: 100px;
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: #0a0a0a;
+  padding: 1rem 1.2rem;
+  text-align: center;
+}
+
+footer p { color: #555; font-size: 0.8rem; }
+footer p span { color: #e63946; }
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.footer-links a {
+  color: #555;
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.footer-links a:hover { color: #e63946; }
+
+
+/* =====================
+   TABLET  (min 600px)
+   ===================== */
+@media (min-width: 600px) {
+
+  .cards-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .hero-btns {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+
+/* =====================
+   DESKTOP  (min 900px)
+   ===================== */
+@media (min-width: 900px) {
+
+  /* Show desktop nav, hide hamburger */
+  .hamburger { display: none; }
+
+  nav {
+    display: block !important;
+    border: none;
+    padding: 0;
+    background: transparent;
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  nav ul li a {
+    padding: 0;
+    font-size: 0.92rem;
+    min-height: auto;
+  }
+
+  header { padding: 0 3rem; }
+  .header-inner { height: 64px; }
+
+  /* Hero two-column */
+  .hero {
+    padding: 5rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    text-align: left;
+    align-items: center;
+  }
+
+  .hero p {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .hero-btns {
+    justify-content: flex-start;
+  }
+
+  .hero-image {
+    display: block;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 12px;
+    opacity: 0.85;
+  }
+
+  /* About two-column */
+  .about {
+    padding: 5rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .about img {
+    height: 340px;
+    margin-bottom: 0;
+  }
+
+  /* Sections wider padding */
+  .services,
+  .portfolio,
+  .team { padding: 5rem 3rem; }
+
+  .contact { padding: 5rem 3rem; }
+
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr 1.4fr;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+  }
+
+  .footer-links { margin-top: 0; }
+}
